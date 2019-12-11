@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/pageStyle.css" type="text/css">
+    <link rel="stylesheet" href="styles/graphStyle.css" type="text/css">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Mono|Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="manifest" href="site.webmanifest">
+    <title>GitHub Visualizer</title>
+</head>
+<body>
+    <div id="header">
+        <div id="logoAndTitle">
+            <img id="logo" src="images/logo_big.png" alt="logo"/>
+            <span id="title">GitHub Visualizer</span>
+        </div>
+    </div>
+    <div class="wrap"><div id="warningTooltip">a</div></div>
+    <div id="statsBox">
+        <div id="inputBox">
+            <input id="inpRepo" type="url" placeholder="https://github.com/...">
+            <a class="btn" id="btnRepo" href="#">Fetch data</a>
+        </div>
+        <table id="stats">
+            <tbody>
+                <tr>
+                    <td>Link: <span></span></td>
+                    <td style="text-align: center">Current branch</td>
+                    <td>Number of commits: <span></span></td>
+                </tr>
+                <tr>
+                    <td>Date created: <span></span></td>
+                    <td>
+                        <select id="branchSel" autocomplete="on">
+                            <option selected>No data loaded</option>
+                        </select>
+                    </td>
+                    <td>Latest commit: <span></span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!--<hr style="border-color: black"/>-->
+    <div id="visualizingBox">
+        <div class="hint">
+            1. Insert the URL to your repository on GitHub in the field above. <br/>
+            2. Press "Fetch data". <br/>
+            3. Wait until data finishes fetching, then press "Visualize!". <br/>
+            4. Wait again for a while. <br/>
+            5. Enjoy your visualization! <br/>
+            <br/>
+            <span style="font-size: 9px; float: right">Visualizer made by Yaroslav Voroshilov, 2019</span>
+        </div>
+        <div class="hint" style="text-align: center; visibility: hidden">
+            <br/>
+            <br/>
+            <div id="progressBarBorder"><div id="progressBar"></div></div>
+        </div>
+        <div id="visualizingField">
+        </div>
+    </div>
+
+    <script src="https://d3js.org/d3.v5.js"></script>
+    <script src="scripts/eventHandlers.js"></script>
+    <script src="scripts/dataCollector.js"></script>
+    <script src="scripts/visualizer.js"></script>
+    <script>
+
+    </script>
+</body>
+</html>
